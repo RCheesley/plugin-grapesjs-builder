@@ -28,7 +28,7 @@ jobs:
             echo "Will try to create changelog based on milestone ${POTENTIAL_MILESTONE} if it exists..."
 
             # In case the Jar below fails, fall back to a default text
-            echo "MAUTIC_CHANGELOG=\"**Based on Mautic's version number (${POTENTIAL_MILESTONE}), we tried finding a milestone with the same name. We couldn't find it though. Make sure it exists (and re-run GitHub Actions) or add a changelog manually!**\"" >> $GITHUB_ENV
+            echo "PLUGIN_CHANGELOG=\"**Based on plugin's version number (${POTENTIAL_MILESTONE}), we tried finding a milestone with the same name. We couldn't find it though. Make sure it exists (and re-run GitHub Actions) or add a changelog manually!**\"" >> $GITHUB_ENV
 
             # Download changelog generator
             wget -q https://github.com/spring-io/github-changelog-generator/releases/download/v0.0.5/github-changelog-generator.jar
