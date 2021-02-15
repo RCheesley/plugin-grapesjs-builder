@@ -53,7 +53,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: ${{ github.ref }}
+          tag_name: ${{ env.PLUGIN_VERSION }}
           release_name: GrapesJS Mautic Builder Plugin v${{ env.PLUGIN_VERSION }}
           draft: true
           prerelease: false
