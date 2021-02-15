@@ -17,7 +17,7 @@ jobs:
       - name: Get tag name
         run: echo "PLUGIN_VERSION=${GITHUB_REF/refs\/tags\//}" >> $GITHUB_ENV
 
-      - name: "Try generating the release notes"
+      - name: Try generating the release notes
           run: |
             # Version as indicated in the metadata, e.g., 3.2.5-rc
             METADATA_VERSION=${{ env.PLUGIN_VERSION }}
